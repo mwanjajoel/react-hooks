@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Todo() {
+function Todo(props) {
+    return(
+        <div className="todo">
+            {props.todo.text}
+        </div>
+        
+    )
 
 
 }
