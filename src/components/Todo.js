@@ -1,11 +1,13 @@
 import React from 'react';
 import '../App.css';
 
-function Todo(props) {
+function Todo({todo, index, completedTodo}) {
     return(
-        <div className="todo">
-            {props.todo.text}
-            <button type="checkbox" style={{ textDecoration: props.todo.isCompleted ? 'line-through': ''}}onClick={() => props.completedTodo(props.todo.index)}></button>
+        <div className="todo" style={{ textDecoration: todo.isCompleted ? 'line-through': ''}}>
+            {todo.text}
+            <div>
+            <button type="checkbox" onClick={() => completedTodo(index)}></button>
+            </div>
         </div>
 
     )
