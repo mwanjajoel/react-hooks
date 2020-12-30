@@ -6,7 +6,7 @@ function Todo({todo, index, completedTodo}) {
         <div className="todo" style={{ textDecoration: todo.isCompleted ? 'line-through': ''}}>
             {todo.text}
             <div>
-            <button type="checkbox" onClick={() => completedTodo(index)}></button>
+            <button onClick={() => completedTodo(index)}>Complete</button>
             </div>
         </div>
 
