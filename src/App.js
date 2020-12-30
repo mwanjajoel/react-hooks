@@ -35,7 +35,7 @@ function App() {
     <div className="app">
       <div className="todo-list">
         {todos.map((todo, index) => (
-          <Todo key={index} todo={todo} index={index} isCompleted={todos.isCompleted} completedTodo={completedTodo}/>
+          <Todo key={index} todo={todo} index={index} completedTodo={completedTodo}/>
         ))}
         <TodoForm addTodo={addTodo}/>
       </div>
