@@ -22,11 +22,20 @@ function App() {
     setTodos(newTodos);
   }
 
+  // function to mark a to do as completed 
+  const completedTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = true;
+    setTodos(newTodos)
+
+
+  }
+
   return (
     <div className="app">
       <div className="todo-list">
         {todos.map((todo, index) => (
-          <Todo key={index} todo={todo} />
+          <Todo key={index} todo={todo} index={index} isCompleted={todos.isCompleted} completedTodo={completedTodo}/>
         ))}
         <TodoForm addTodo={addTodo}/>
       </div>
